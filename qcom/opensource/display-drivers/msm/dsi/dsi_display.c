@@ -8334,10 +8334,10 @@ int dsi_display_set_mode(struct dsi_display *display,
 		}
 	}
 
-	if (display->panel->lhbm_state && mode->timing.refresh_rate != 120) {
+	/* if (display->panel->lhbm_state && mode->timing.refresh_rate != 120) {
 		fp_status = 0;
 		dsi_display_set_lhbm_state(display, 0);
-	}
+	} */
 
 #if IS_ENABLED(CONFIG_NOTHING_IS_FROGGERPRO)
 	if (display->panel->cur_mode) {
