@@ -547,6 +547,9 @@ static int _sde_connector_update_finger_hbm_status(
 	else
 		dsi_display_set_lhbm_state(display, fp_status);
 
+        if (!fp_status)
+		send_refreshrate_cmd(display->panel, display->panel->cur_mode->timing.refresh_rate);
+
 	return 0;
 }
 
